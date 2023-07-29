@@ -7,8 +7,9 @@ require("hardhat-deploy")
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  /*solidity: "0.8.19",
+  solidity: "0.8.19",
   defaultNetwork: "hardhat",
+  /*
   networks: {
     sepolia: {
       url: SEPOLIA_RPC_URL,
