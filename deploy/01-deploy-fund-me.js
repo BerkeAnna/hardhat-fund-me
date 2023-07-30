@@ -9,14 +9,13 @@ module.exports = {
 };
 */
 
-const { network } = require("../helper-hardhat-config")
-const helperConfig = require("../helper-hardhat-config")
-const networkConfig = helperConfig.network
+const { networkConfig } = require("../helper-hardhat-config")
+const { network } = require("hardhat")
 
 module.exports = async ({getNamedAccounts, deployments}) => {
     const {deploy, log} = deployments
     const {deployer} = await getNamedAccounts()
-    const chainId = networkConfig.chainId
+    const chainId = networkConfig.config.chainId
 
     const ethUsdPriceFeedAddress = networkConfig[chainId]["ethUsdPriceFeed"]
 
